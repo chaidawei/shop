@@ -1,0 +1,43 @@
+.body2{
+    background: url("../image/back.jpg") no-repeat 100%;
+}
+.login{
+    background: url("../image/d1.png") no-repeat;
+    height: 300px;
+    width: 400px;
+    margin: 200px auto;
+}
+.alert_span{
+    font-size: 30px;
+    color: red;
+}
+/*****************/
+#dd tr th ,#dd tr td{
+    -ms-text-align-last: center;
+    text-align: center;
+}
+.page_right_foot{
+    background-color: #23cdd8;
+    float: left;
+    width: 100%;
+    margin-top: -19px;
+    padding-top: 2px;
+}
+Strong{
+    color: #2b542c;
+}
+
+.welcom_s :hover{
+    color: red;
+}
+.page_right_foot table{
+    margin: 20px auto;
+}
+.page a {
+   text-decoration: none;
+}
+.page a:hover{
+    color: red;
+}
+
+

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)https://login.lppz.com/login -->
+<html lang="ZH-CN">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>用户登录</title>
+	<link href="../css/global.css" rel="stylesheet">
+	<link href="../css/use.css" rel="stylesheet" type="text/css">
+	<script src="../js/jquery.min.js"></script>
+</head>
+<body>
+		<!-- 顶部BAR -->
+		<div class="toolbar">
+			<div class="toolbar-cont wrap">
+				<ul class="fl">
+					<li>您好，欢迎来到大卫商城官方商城！</li>
+					<li><a class="reg" href="../register/register.html">[注册]</a>
+					</li>
+				</ul>
+				<ul class="fr">
+					<li>
+						<div class="top-help">
+							<a class="" target="_blank" href="../index.jsp">官方网站</a>&nbsp;&nbsp;|
+						</div>
+					</li>
+					<li><span class="tel">全国订购热线：<em>400-1177-517</em>
+					</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- LOG HEADER 适配范围：登陆、注册、绑定页面 -->
+		<div class="log-header wrap">
+			<div class="slogo">
+				<a title="良品铺子" href="../index.jsp">大卫商城</a>
+			</div>
+			<div class="sub-tit">欢迎登录</div>
+		</div>
+
+		<!--内容部分-->
+		<div class="login-main wrap clearfix">
+			<div class="login-img">
+				<img src="images/left_img.jpg" alt="" class="pic">
+			</div>
+			<div class="login-data">
+				<div class="ldt-titlte">
+					<strong class="tit">会员登录</strong><span class="reg-new">新用户，<a href="../register/register.html" class="free-reg">免费注册&gt;</a>
+					</span>
+				</div>
+				<ul class="ldt-form focus-bd">
+					<li>
+						<div class="ipt">
+							<input id="username" name="username" class="tx-ipt" tabindex="1" type="text" value="" size="25" autocomplete="off" placeholder="用户名">
+							<label class="fill-error username none">请输入用户名</label>
+						</div>
+					</li>
+					<li>
+						<div class="ipt">
+							<input id="password" name="password" class="tx-ipt" tabindex="2" type="password" value="" size="25" autocomplete="off" placeholder="密码">
+							<label class="fill-error password none">请输入密码</label>
+						</div>
+					</li>
+					<li>
+						<span class="lab"><a href="#">忘记密码？</a>
+						</span>
+						<div class="smt-btn">
+							<input type="submit"  class="log-btn d-b" id="log-btn" value="登 录">
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!----------适配范围：登陆、注册、绑定页面的底部---------------->
+		<!--底部-->
+		<div class="log-footer">
+			<div class="lfoot wrap">
+				<div class="lfoot-link">
+					<ul>
+						<li><a href="#" target="_blank">关于我们</a> |</li>
+						<li><a href="#" target="_blank">联系我们</a> |</li>
+						<li><a href="#" target="_blank">客户服务</a> |</li>
+						<li><a href="#" target="_blank">诚聘英才</a> |</li>
+						<li><a href="#" target="_blank">商务合作</a> |</li>
+						<li><a href="#" target="_blank">媒体报道</a> |</li>
+						<li><a href="#">网站地图</a> |</li>
+						<li><a href="#" target="_blank">快递查询</a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					Copyright@2006-2017 湖北良品铺子电子商务有限公司 All rights Reserved<br><a target="_blank" href="http://www.miibeian.gov.cn/publish/query/indexFirst.action">鄂ICP备15022981号</a>
+				</div>
+			</div>
+		</div>
+		<!--底部-->
+		<!--<script src="./用户登录_files/base.js"></script>-->
+<script type="text/javascript">
+	var $un = $('#username');
+	var $pw = $('#password');
+	$un.focus(function() {
+		$('.fill-error.username').hide();
+	});
+	$pw.focus(function() {
+		$('.fill-error.password').hide();
+	});
+	function submitForm() {
+		if (!$un.val()) {
+			$('.fill-error.username').show();
+			return;
+		}else if (!$pw.val()) {
+			$('.fill-error.password').show();
+			return;
+		}else{
+            $.ajax({
+                url:"../login",
+                type:"POST",
+                data:{username:$un.val(),password:$pw.val()},
+                dataType:"json",
+                success:function (message) {
+                    if(message=='1'){
+                        location.href="../index.jsp";
+					}else{
+						alert("登陆失败，账号或密码错误");
+					}
+                }
+            });
+		}
+	}
+	$('#log-btn').click(submitForm);
+</script>
+
+</body></html>

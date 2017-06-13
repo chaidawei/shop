@@ -1,0 +1,24 @@
+@charset "utf-8";
+body{_margin:0;_height:100%;}
+/*弹层*/
+.lp-dialog{position:fixed;top:0;left:0;z-index:999;width:300px;border:5px solid #d7d7d7;border-color:rgba(153,153,153,.8);border-radius:3px;_position:absolute;}
+.lp-dialog .close{position:absolute;top:8px;right:8px;width:12px;height:12px;background:url(../images/close.png) no-repeat;cursor:pointer;}
+.lp-dialog .close:hover{-webkit-transform:rotate(90deg);-ms-transform:rotate(90deg);-o-transform:rotate(90deg);transform:rotate(90deg);}
+.lp-dialog .head{height:30px;line-height:30px;padding:0 10px;background-color:#e4e4e4;border-bottom:1px solid #ccc;overflow:hidden;}
+.lp-dialog .main{padding:20px;background-color:#fff;}
+.lp-dialog .msg{padding-bottom:20px;}
+.lp-dialog .msg h3{text-align:center;color:#f00;font-size:16px;}
+.lp-dialog .msg p{text-align:center;color:#05c;font-size:14px;}
+.lp-dialog .foot{padding:10px 0 30px;text-align:center;background-color:#fff;}
+.lp-dialog .foot .button{margin:0 9px;padding:1px 10px;border:1px solid #ddd;background-color:#fff;color:#666;cursor:pointer;font-size:12px;border-radius:2px;}
+.lp-dialog .foot .confirm{color:#fff;background-color:#f04647;border-color:#f04747;}
+.lp-dialog .foot .confirm:hover{background-color:#ff5353;border-color:#ff5353;}
+.lp-dialog .foot .cancel{}
+.lp-dialog .foot .cancel:hover{color:#ff5353;border-color:#ff5353;}
+.lp-dialog .close,
+.lp-dialog .foot .button{
+	-webkit-transition:all .3s;
+	-ms-transition:all .3s;
+	-o-transition:all .3s;
+	transition:all .3s;
+}

@@ -1,0 +1,35 @@
+.out .img {list-style: none;}
+.out {
+    position: relative;
+    width: 800px;
+    height: 440px;
+    margin: 0 auto;
+}
+.out .img li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.out .num {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    font-size: 0;
+    width: 100%;
+    text-align: center;
+}
+.out .num li {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    font-size: 16px;
+    background-color: #666;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50%;
+    margin: 0 3px;
+    cursor: pointer;
+}
+.out .num li.active { background-color:#a00;}
